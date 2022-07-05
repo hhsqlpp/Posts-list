@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search input {
+    width: calc(100% - 250px);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search select {
+    width: 200px;
+    padding: 8px 0px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.posts__title {
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.posts__list {
+    display: grid;
+    grid-template-columns: repeat(5, 240px);
+    gap: 10px;
+    row-gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.posts__list-item {
+    height: 500px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    position: relative;
+}
+
+.posts__list-item__ifno {
+    padding: 10px;
+}
+
+.posts__list-item__ifno-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    overflow-y: hidden;
+    height: 20px;
+}
+
+.posts__list-item__ifno-body {
+    height: 40px;
+    overflow-y: hidden;
+}
+
+.posts__pagin {
+    display: flex;
+    column-gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.posts__pagin button {
+    width: 150px;
+    padding: 7px 0px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.posts__pagin button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#delete {
+    width: 150px;
+    padding: 3px 0px;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
