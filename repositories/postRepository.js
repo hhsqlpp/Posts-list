@@ -1,12 +1,12 @@
 class PostRepository {
 	async getAll(page = 1, limit = 10, ignoreArr = []) {
-		const ingoreStr =
+		const ignoreStr =
 			ignoreArr && ignoreArr.length > 0
 				? ignoreArr.reduce((curr, next) => curr + "&id_ne=" + next, "")
 				: "";
 
 		const res = await fetch(
-			`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}&_expand=user&${ingoreStr}`
+			`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}&_expand=user&${ignoreStr}`
 		);
 		const posts = await res.json();
 
