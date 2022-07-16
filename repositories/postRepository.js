@@ -1,7 +1,7 @@
 class PostRepository {
 	async getAll(page = 1, limit = 10, ignoreArr = []) {
 		const ingoreStr =
-			ignoreArr && ignoreArr.length > 1
+			ignoreArr && ignoreArr.length > 0
 				? ignoreArr.reduce((curr, next) => curr + "&id_ne=" + next, "")
 				: "";
 
