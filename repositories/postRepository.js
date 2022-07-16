@@ -60,6 +60,9 @@ class PostRepository {
 			`https://jsonplaceholder.typicode.com/users?username=${name}&_embed=posts`
 		);
 		const user = await res.json();
+
+		if (user.length === 0) return [];
+
 		const fixedPosts = await user[0].posts.map((post) => {
 			return {
 				...post,
